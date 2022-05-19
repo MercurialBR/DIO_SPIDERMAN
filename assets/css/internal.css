@@ -1,5 +1,8 @@
 @import url(reset.css);
 @import url(global.css);
+@import url(/components/__pills.css);
+@import url(/components/_link-button.css);
+@import url(/components/_gallery.css);
 
 .wrapper{
     display: flex;
@@ -10,17 +13,21 @@
 .wrapper .left-column{
     width: 100px;
     height: 100%;
-    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    padding-right: 50px;
+    left: 0;
+    top: 0;
+    z-index: 1;
 }
 
 .wrapper .main-content{
     width: 100%;
     height: 100%;
     background-color: gray;
-    padding-left: 30px;
+    padding-left: 130px;
 }
 
 .navigator{
@@ -81,15 +88,69 @@
     top: -20px;
 }
 
+.wrapper .main-content__top{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
 
+.wrapper .main-content__bottom{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
 
+.wrapper .main-content .logo img{
+    margin-top: 50px;
+    margin-left: 0;
+    margin-bottom: 30px;
+}
 
+.pills ul{
+    display: flex;
+    flex-direction: row;
+}
 
+.pills ul li{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 15px;
+    margin: 0 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
 
+.pills ul li:first-child{
+    margin-left: 0;
+}
 
+.wrapper .main-content__top .description{
+    background-color: rgba(0, 0, 0, .7);
+    max-width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+}
 
+.wrapper .main-content__top .description .description__text p{
+    color: white;
+    line-height: 170%;
+}
 
+.wrapper .main-content__top .description .pills{
+    margin-bottom: 20px;
+}
 
+.wrapper .main-content .links{
+    padding: 20px;
+    padding-left: 0;
+}
+
+.wrapper .main-content .links ul{
+    display: flex;
+    flex-direction: row;
+}
 
 
 
